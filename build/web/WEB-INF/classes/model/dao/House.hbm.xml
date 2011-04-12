@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2011.04.06. 10:37:57 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="iparigame" name="model.dao.House" table="house">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="ownerid" type="int">
+      <column name="ownerid" not-null="true"/>
+    </property>
+    <property name="size" type="int">
+      <column name="size" not-null="true"/>
+    </property>
+    <property name="worth" type="int">
+      <column name="worth" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
