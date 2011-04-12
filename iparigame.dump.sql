@@ -42,6 +42,55 @@ LOCK TABLES `house` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `items`
+--
+
+DROP TABLE IF EXISTS `items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `items` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `house_id` int(11) DEFAULT NULL,
+  `itemtype_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`item_id`),
+  KEY `idx_items` (`house_id`),
+  KEY `idx_items_0` (`itemtype_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `items`
+--
+
+LOCK TABLES `items` WRITE;
+/*!40000 ALTER TABLE `items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `itemtypes`
+--
+
+DROP TABLE IF EXISTS `itemtypes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `itemtypes` (
+  `item_id` int(11) NOT NULL,
+  `itemname` varchar(250) COLLATE utf8_hungarian_ci NOT NULL,
+  PRIMARY KEY (`item_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `itemtypes`
+--
+
+LOCK TABLES `itemtypes` WRITE;
+/*!40000 ALTER TABLE `itemtypes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `itemtypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -80,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-04-12 15:29:32
+-- Dump completed on 2011-04-12 16:04:10

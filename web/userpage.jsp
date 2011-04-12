@@ -17,5 +17,6 @@
     <body>
         <h1>Hello <s:property value="username" />!</h1>
         <h2>This is your house.</h2>
+        <h2>Here are the things that are in your house.</h2>
     </body>
 </html>
